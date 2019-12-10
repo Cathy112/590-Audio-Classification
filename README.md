@@ -1,6 +1,8 @@
 # Audio Classification
 
 ## Project Overview
+This project is instructed by Prof. Chris Kyriakakis, USC.
+
 The objective of the project is to build and train a model to identify urban sound. Due to the limitation of the obtained dataset, the Neural Network model is able to identify 10 types of sound including:  
 0 = air_conditioner  
 1 = car_horn  
