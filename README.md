@@ -49,13 +49,16 @@ All the code is contained in a jupyter notebook file named "Audio Classification
 
 
 ## How to Use
-The entire notebook contains the functions to pre-process the specified dataset, define a Convolutional Neural Network Model and to train the model with the data. The model and the trained weights are saved into specified files.  
+The entire notebook contains the functions to pre-process the specified dataset, define a Convolutional Neural Network Model and to train the model with the data. The model and the trained weights are saved into specified files.
+
 At the end of the notebook, you have a part that you can load the model and the pretrained weights. And use the next cell to load user specified sound clip. The sound clip need to last about 2s, and the part containing information need to be within the 2s part. 
 
 
 ## Data Pre-processing
-The data pre-processing in this case is to turn the 1D audio signal to 2D (actually 3D, but the last dimension is 1) audio sprectrum. This is done through Librosa library.  
+The data pre-processing in this case is to turn the 1D audio signal to 2D (actually 3D, but the last dimension is 1) audio sprectrum. This is done through Librosa library.
+
 One critical parameter - the vertical dimension in the audio sprectrum (the dimention n in the input sprectrum n * 173 * 1) is experimented.  
+
 ![alt text](./Model&#32;Accuracy&#32;vs.&#32;MFCC&#32;Number.png)  
 As the image show, when the vertical dimention is 40 the model will have the highest accuracy. 
 
@@ -87,7 +90,8 @@ Overall the model has 4 Convolutional blocks. Each block is consisted of a convo
 
 ## Results
 ![alt text](./Result.png)
-As the graph show, from training epoch of about 150 the accuracy improves very slowly. More epoches than 150 may cause over fitting. Thus, the training epoch is set to 150. A slightly lower number (~120) is also acceptable. 
+As the graph show, from training epoch of about 150 the accuracy improves very slowly. More epoches than 150 may cause over fitting. Thus, the training epoch is set to 150. A slightly lower number (~120) is also acceptable.
+
 The achieved training accuracy is 92.26%, the validation accuracy is 87.51%, the test accuracy is 87.13%.
 
 ## Unsuccessful Attempts
