@@ -35,7 +35,7 @@ Setting up a virtual environment and install the required packages in the virtua
 4. [UrbanSound8K](./UrbanSound8K) is the dataset obtained online to train the Neural Network model. The description of this dataset can be found in [README](./UrbanSound8K/UrbanSound8K_README.txt) file in the folder.  
 5. [audio_features_mfcc40.pickle](./audio_features_mfcc40.pickle) is the pre-processed data file. Processing the data can take 15 minutes up, store the pre-processed data is important to save time.  
 
-**In order to make the program run correctly, the UrbanSound8K folder should be unchanged and stayed in the main folder. The rest of the files need to be in the same folder as the notebook file. Otherwise, the path reference to some of the files in the notebook need to be adjusted accordingly.**
+**In order to make the program run correctly, the UrbanSound8K folder should be unchanged and stayed in the main folder. The rest of the files need to be in the same folder as the notebook file. Otherwise, the paths reference to some of the files in the notebook need to be adjusted accordingly.**
 
 
 ## Code Structure
@@ -51,7 +51,7 @@ All the code is contained in a jupyter notebook file named "Audio Classification
 ## How to Use
 The entire notebook contains the functions to pre-process the specified dataset, define a Convolutional Neural Network Model and to train the model with the data. The model and the trained weights are saved into specified files.
 
-At the end of the notebook, you have a part that you can load the model and the pretrained weights. And use the next cell to load user specified sound clip. The sound clip need to last about 2s, and the part containing information need to be within the 2s part. 
+At the end of the notebook, you have a part that you can load the model and the pretrained weights. And use the next cell to load user specified sound clip. The sound clip needs to last about 2s, and the part containing information needs to be within the 2s part. 
 
 
 ## Data Pre-processing
