@@ -35,7 +35,9 @@ Setting up a virtual environment and install the required packages in the virtua
 2. [sound_classification_model.json](./sound_classification_model.json) is the Model object where the Neural Network is defined and store to .h5 file to avoid repeated model compilation.  
 3. [weights.best.basic_cnn.hdf5](./weights.best.basic_cnn.hdf5) is the file that contains the weight used in the model. So we can quickly continue the progress to do a prediction.
 4. [UrbanSound8K](./UrbanSound8K) is the dataset obtained online to train the Neural Network model. The description of this dataset can be found in [README](./UrbanSound8K/UrbanSound8K_README.txt) file in the folder.  
-5. [audio_features_mfcc40.pickle](./audio_features_mfcc40.pickle) is the pre-processed data file. Processing the data can take 15 minutes up, store the pre-processed data is important to save time.  
+The dataset folder is not included in this GitHub repository, but can be downloaded from https://urbansounddataset.weebly.com/urbansound8k.html.
+5. [audio_features_mfcc40.pickle](./audio_features_mfcc40.pickle) is the pre-processed data file. Processing the data can take 15 minutes up, store the pre-processed data is important to save time. 
+This file is not included in this GitHub repository, but can generate a new one by running save_data() function in main file.
 
 **In order to make the program run correctly, the UrbanSound8K folder should be unchanged and stayed in the main folder. The rest of the files need to be in the same folder as the notebook file. Otherwise, the paths reference to some of the files in the notebook need to be adjusted accordingly.**
 
