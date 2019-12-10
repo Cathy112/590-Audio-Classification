@@ -100,5 +100,5 @@ MobileNet model is attempted to be applied, but not successful. The dimension of
 ## Future Developments
 As for the future development, you can either fix the issue with MobileNet (or other CNN networks) and have the model trained on the pre-processed data, or use an Recurrent Neural Network (RNN) model. It is much more effective to use RNN models on sequential data like audio or speech. Because RNN model can capture the sequential relation in the data, while CNN model does this poorly.
 
-## Liscense
+## License
 Private use only
