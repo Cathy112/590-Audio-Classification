@@ -100,5 +100,12 @@ MobileNet model is attempted to be applied, but not successful. The dimension of
 ## Future Developments
 As for the future development, you can either fix the issue with MobileNet (or other CNN networks) and have the model trained on the pre-processed data, or use an Recurrent Neural Network (RNN) model. It is much more effective to use RNN models on sequential data like audio or speech. Because RNN model can capture the sequential relation in the data, while CNN model does this poorly.
 
+## Reference
+[1] Mike Smales, Sound Classification using Deep Learning. Retrieved from https://medium.com/@mikesmales/sound-classification-using-deep-learning-8bc2aa1990b7
+[2] Aakash Mallik, Audio signal feature extraction and clustering. Retrieved from https://medium.com/heuristics/audio-signal-feature-extraction-and-clustering-935319d2225
+[3] TensorFlow Audio Recognition in 10 Minutes. Retrieved from https://data-flair.training/blogs/tensorflow-audio-recognition/
+[4] Keras Documentation. Retrieved from https://keras.io/getting-started/sequential-model-guide/
+[5] URBANSOUND8K DATASET. Retrieved from https://urbansounddataset.weebly.com/urbansound8k.html
+
 ## License
 Private use only
