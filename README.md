@@ -1,4 +1,4 @@
-# Sound Classification
+# Audio Classification
 
 ## Project Overview
 The objective of the project is to build and train a model to identify urban sound. Due to the limitation of the obtained dataset, the Neural Network model is able to identify 10 types of sound including:  
@@ -55,9 +55,9 @@ At the end of the notebook, you have a part that you can load the model and the 
 
 
 ## Data Pre-processing
-The data pre-processing in this case is to turn the 1D audio signal to 2D (actually 3D, but the last dimension is 1) audio sprectrum. This is done through Librosa library.
+The data pre-processing in this case is to turn the 1D audio signal to 2D (actually 3D, but the last dimension is 1) audio spectrum. This is done through Librosa library.
 
-One critical parameter - the vertical dimension in the audio sprectrum (the dimention n in the input sprectrum n * 173 * 1) is experimented.  
+One critical parameter - the vertical dimension in the audio spectrum (the dimention n in the input spectrum n * 173 * 1) is experimented.  
 
 ![alt text](./Model&#32;Accuracy&#32;vs.&#32;MFCC&#32;Number.png)  
 As the image show, when the vertical dimention is 40 the model will have the highest accuracy. 
@@ -95,7 +95,7 @@ As the graph show, from training epoch of about 150 the accuracy improves very s
 The achieved training accuracy is 92.26%, the validation accuracy is 87.51%, the test accuracy is 87.13%.
 
 ## Unsuccessful Attempts
-MobileNet model is attempted to be applied, but not successful. The dimension of the dataset seems to be inconsistent with the predifined model. The MobileNet model works best with square images (in this case audio sprectrum), but the data we have is (40 * 173 * 1) which is very stretched. This could be the reason why MobileNet and most of other CNN models cannot be applied on this dataset. It is likely that CNN models won't work well on audio data even though the bug is fixed.
+MobileNet model is attempted to be applied, but not successful. The dimension of the dataset seems to be inconsistent with the predifined model. The MobileNet model works best with square images (in this case audio spectrum), but the data we have is (40 * 173 * 1) which is very stretched. This could be the reason why MobileNet and most of other CNN models cannot be applied on this dataset. It is likely that CNN models won't work well on audio data even though the bug is fixed.
 
 ## Future Developments
 As for the future development, you can either fix the issue with MobileNet (or other CNN networks) and have the model trained on the pre-processed data, or use an Recurrent Neural Network (RNN) model. It is much more effective to use RNN models on sequential data like audio or speech. Because RNN model can capture the sequential relation in the data, while CNN model does this poorly.
