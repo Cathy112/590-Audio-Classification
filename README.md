@@ -57,10 +57,10 @@ At the end of the notebook, you have a part that you can load the model and the 
 ## Data Pre-processing
 The data pre-processing in this case is to turn the 1D audio signal to 2D (actually 3D, but the last dimension is 1) audio spectrum. This is done through Librosa library.
 
-One critical parameter - the vertical dimension in the audio spectrum (the dimention n in the input spectrum n * 173 * 1) is experimented.  
+One critical parameter - the vertical dimension in the audio spectrum (the dimension n in the input spectrum n * 173 * 1) is experimented.  
 
 ![alt text](./Model&#32;Accuracy&#32;vs.&#32;MFCC&#32;Number.png)  
-As the image show, when the vertical dimention is 40 the model will have the highest accuracy. 
+As the image show, when the vertical dimension is 40 the model will have the highest accuracy. 
 
 
 ## Model Architecture
@@ -86,16 +86,16 @@ As the image show, when the vertical dimention is 40 the model will have the hig
 | Flatten				| faltten to 1 dimension			|
 | Softmax				|Output layer using Softmax				|
   
-Overall the model has 4 Convolutional blocks. Each block is consisted of a convolution layer followed by a ReLu activation layer. And then a Max pooling layer and a Dropout to regularize the ouput. Finally, there is a fully connected flatten layer with a softmax activation. The model is a bit like the classic LeNet-5 model.
+Overall the model has 4 Convolutional blocks. Each block is consisted of a convolution layer followed by a ReLu activation layer. And then a Max pooling layer and a Dropout to regularize the output. Finally, there is a fully connected flatten layer with a Softmax activation. The model is a bit like the classic LeNet-5 model.
 
 ## Results
 ![alt text](./Result.png)
-As the graph show, from training epoch of about 150 the accuracy improves very slowly. More epoches than 150 may cause over fitting. Thus, the training epoch is set to 150. A slightly lower number (~120) is also acceptable.
+As the graph show, from training epoch of about 150 the accuracy improves very slowly. More epochs than 150 may cause over fitting. Thus, the training epoch is set to 150. A slightly lower number (~120) is also acceptable.
 
 The achieved training accuracy is 92.26%, the validation accuracy is 87.51%, the test accuracy is 87.13%.
 
 ## Unsuccessful Attempts
-MobileNet model is attempted to be applied, but not successful. The dimension of the dataset seems to be inconsistent with the predifined model. The MobileNet model works best with square images (in this case audio spectrum), but the data we have is (40 * 173 * 1) which is very stretched. This could be the reason why MobileNet and most of other CNN models cannot be applied on this dataset. It is likely that CNN models won't work well on audio data even though the bug is fixed.
+MobileNet model is attempted to be applied, but not successful. The dimension of the dataset seems to be inconsistent with the predefined model. The MobileNet model works best with square images (in this case audio spectrum), but the data we have is (40 * 173 * 1) which is very stretched. This could be the reason why MobileNet and most of other CNN models cannot be applied on this dataset. It is likely that CNN models won't work well on audio data even though the bug is fixed.
 
 ## Future Developments
 As for the future development, you can either fix the issue with MobileNet (or other CNN networks) and have the model trained on the pre-processed data, or use an Recurrent Neural Network (RNN) model. It is much more effective to use RNN models on sequential data like audio or speech. Because RNN model can capture the sequential relation in the data, while CNN model does this poorly.
